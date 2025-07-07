@@ -165,7 +165,10 @@ export default async function ExperienceDetailPage({ params }: PageProps) {
                       {project.name}
                     </CardTitle>
                     <CardDescription className="text-slate-600">
-                      {project.role} • 期間: {project.duration}
+                      <span className="text-slate-800">期間：</span>
+                      {project.duration} <br />
+                      <span className="text-slate-800">担当工程：</span>
+                      {project.role}
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
@@ -185,15 +188,58 @@ export default async function ExperienceDetailPage({ params }: PageProps) {
                         </div>
                       </div>
 
+                      {/* プロジェクト詳細 */}
                       <div>
-                        <h4 className="font-semibold text-slate-800 mb-2">
-                          プロジェクト成果
-                        </h4>
-                        <ul className="list-disc list-inside text-slate-700 space-y-1">
-                          {project.achievements.map((achievement, achIndex) => (
-                            <li key={achIndex}>{achievement}</li>
-                          ))}
-                        </ul>
+                        {/* プロジェクト概要 */}
+                        <div>
+                          <h4 className="font-semibold text-slate-800 mb-2">
+                            プロジェクト概要
+                          </h4>
+                          <p className="text-slate-700 mb-2">
+                            {project.overview}
+                          </p>
+                        </div>
+
+                        {/* 開発経緯 */}
+                        <div>
+                          <h4 className="font-semibold text-slate-800 mb-2">
+                            開発経緯
+                          </h4>
+                          <p className="text-slate-700 mb-2">
+                            {project.developmentHistory}
+                          </p>
+                        </div>
+
+                        {/* 開発課題 */}
+                        {project.developmentIssue && (
+                          <div>
+                            <h4 className="font-semibold text-slate-800 mb-2">
+                              開発課題
+                            </h4>
+                            <p className="text-slate-700 mb-2">
+                              {project.developmentIssue || "特になし"}
+                            </p>
+                          </div>
+                        )}
+
+                        {/* 対応内容 */}
+                        <div>
+                          <h4 className="font-semibold text-slate-800 mb-2">
+                            対応内容
+                          </h4>
+                          <ul className="list-disc list-inside text-slate-700">
+                            {project.compatibleContentList.map(
+                              (content, index) => (
+                                <div key={index}>
+                                  <li>{content}</li>
+                                  <p className="text-slate-700 mb-2">
+                                    {project.compatibleContent[index]}
+                                  </p>
+                                </div>
+                              )
+                            )}
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </CardContent>
