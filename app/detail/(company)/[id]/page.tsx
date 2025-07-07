@@ -23,13 +23,12 @@ import { notFound } from "next/navigation";
 import { getExperienceById } from "@/lib/experienceData";
 
 interface PageProps {
-  params: {
-    id: number;
-  };
+  params: Promise<{ id: string }>;
 }
 
-export default function ExperienceDetailPage({ params }: PageProps) {
-  const experience = getExperienceById(Number(params.id));
+export default async function ExperienceDetailPage({ params }: PageProps) {
+  const { id } = await params;
+  const experience = getExperienceById(Number(id));
 
   if (!experience) {
     notFound();
