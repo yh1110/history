@@ -28,7 +28,7 @@ export default function Portfolio() {
       <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-4">
           <nav className="flex items-center justify-between">
-            <div className="text-2xl font-bold text-slate-800">田中 太郎</div>
+            <div className="text-2xl font-bold text-slate-800">細田 靖人</div>
             <div className="hidden md:flex items-center space-x-8">
               <Link
                 href="#about"
@@ -78,11 +78,9 @@ export default function Portfolio() {
                 className="rounded-full mx-auto mb-6 border-4 border-white shadow-lg"
               />
               <h1 className="text-5xl font-bold text-slate-800 mb-4">
-                田中 太郎
+                細田 靖人
               </h1>
-              <p className="text-xl text-slate-600 mb-2">
-                フルスタックエンジニア
-              </p>
+              <p className="text-xl text-slate-600 mb-2">Webエンジニア</p>
               <div className="flex items-center justify-center text-slate-500 mb-6">
                 <MapPin className="w-4 h-4 mr-2" />
                 <span>東京都, 日本</span>
@@ -90,9 +88,8 @@ export default function Portfolio() {
             </div>
 
             <p className="text-lg text-slate-700 leading-relaxed mb-8 max-w-3xl mx-auto">
-              5年以上のWebアプリケーション開発経験を持つフルスタックエンジニアです。
-              React、Node.js、TypeScriptを中心とした現代的な技術スタックでの開発を得意とし、
-              ユーザー体験を重視したプロダクト開発に情熱を注いでいます。
+              TypeScript や Python を用いた Web アプリケーション開発を中心に経験しているエンジニアです。
+              Next.js や Django などのフレームワークを活用し、チーム開発とテストを大切にしています。
             </p>
 
             <div className="flex justify-center space-x-4">
@@ -103,7 +100,7 @@ export default function Portfolio() {
                 </Link>
               </Button>
               <Button variant="outline" asChild>
-                <Link href="https://github.com" target="_blank">
+                <Link href="https://github.com/yh1110" target="_blank">
                   <Github className="w-4 h-4 mr-2" />
                   GitHub
                 </Link>
@@ -406,7 +403,7 @@ export default function Portfolio() {
                   </div>
                   <div className="flex space-x-2">
                     <Button size="sm" variant="outline" asChild>
-                      <Link href="https://github.com" target="_blank">
+                      <Link href="https://github.com/yh1110" target="_blank">
                         <Github className="w-4 h-4 mr-2" />
                         GitHub
                       </Link>
@@ -448,7 +445,7 @@ export default function Portfolio() {
                   </div>
                   <div className="flex space-x-2">
                     <Button size="sm" variant="outline" asChild>
-                      <Link href="https://github.com" target="_blank">
+                      <Link href="https://github.com/yh1110" target="_blank">
                         <Github className="w-4 h-4 mr-2" />
                         GitHub
                       </Link>
@@ -490,7 +487,7 @@ export default function Portfolio() {
                   </div>
                   <div className="flex space-x-2">
                     <Button size="sm" variant="outline" asChild>
-                      <Link href="https://github.com" target="_blank">
+                      <Link href="https://github.com/yh1110" target="_blank">
                         <Github className="w-4 h-4 mr-2" />
                         GitHub
                       </Link>
@@ -522,7 +519,7 @@ export default function Portfolio() {
               <div className="text-center">
                 <Mail className="w-8 h-8 mx-auto mb-4 text-emerald-400" />
                 <h3 className="text-lg font-semibold mb-2">メール</h3>
-                <p className="text-slate-300">tanaka@example.com</p>
+                <p className="text-slate-300">hosoda@example.com</p>
               </div>
               <div className="text-center">
                 <Phone className="w-8 h-8 mx-auto mb-4 text-emerald-400" />
@@ -543,7 +540,7 @@ export default function Portfolio() {
                 asChild
                 className="border-white text-white hover:bg-white hover:text-slate-800 bg-transparent"
               >
-                <Link href="mailto:tanaka@example.com">
+                <Link href="mailto:hosoda@example.com">
                   <Mail className="w-5 h-5 mr-2" />
                   メールを送る
                 </Link>
@@ -569,7 +566,7 @@ export default function Portfolio() {
         <div className="container mx-auto px-4">
           <div className="text-center">
             <p>
-              &copy; {new Date().getFullYear()} 田中 太郎. All rights reserved.
+              &copy; {new Date().getFullYear()} 細田 靖人. All rights reserved.
             </p>
           </div>
         </div>
