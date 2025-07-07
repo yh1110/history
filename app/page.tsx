@@ -9,11 +9,10 @@ import {
 } from "@/components/ui/card";
 import {
   Github,
-  Linkedin,
+  ExternalLink,
   Mail,
   MapPin,
   Phone,
-  ExternalLink,
   Calendar,
   Building,
 } from "lucide-react";
@@ -27,7 +26,7 @@ export default function Portfolio() {
       <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-4">
           <nav className="flex items-center justify-between">
-            <div className="text-2xl font-bold text-slate-800">田中 太郎</div>
+            <div className="text-2xl font-bold text-slate-800">細田 靖人</div>
             <div className="hidden md:flex items-center space-x-8">
               <Link
                 href="#about"
@@ -77,7 +76,7 @@ export default function Portfolio() {
                 className="rounded-full mx-auto mb-6 border-4 border-white shadow-lg"
               />
               <h1 className="text-5xl font-bold text-slate-800 mb-4">
-                田中 太郎
+                細田 靖人
               </h1>
               <p className="text-xl text-slate-600 mb-2">
                 フルスタックエンジニア
@@ -89,9 +88,7 @@ export default function Portfolio() {
             </div>
 
             <p className="text-lg text-slate-700 leading-relaxed mb-8 max-w-3xl mx-auto">
-              5年以上のWebアプリケーション開発経験を持つフルスタックエンジニアです。
-              React、Node.js、TypeScriptを中心とした現代的な技術スタックでの開発を得意とし、
-              ユーザー体験を重視したプロダクト開発に情熱を注いでいます。
+              React/Next.js や Python を用いた開発を得意とするフルスタックエンジニアです。CI/CD などの自動化やモバイルアプリ開発にも興味を持ち、学習を続けています。価値観は「できないは思考停止、できるは思考の出発点」です。
             </p>
 
             <div className="flex justify-center space-x-4">
@@ -102,15 +99,15 @@ export default function Portfolio() {
                 </Link>
               </Button>
               <Button variant="outline" asChild>
-                <Link href="https://github.com" target="_blank">
+                <Link href="https://github.com/yh1110" target="_blank">
                   <Github className="w-4 h-4 mr-2" />
                   GitHub
                 </Link>
               </Button>
               <Button variant="outline" asChild>
-                <Link href="https://linkedin.com" target="_blank">
-                  <Linkedin className="w-4 h-4 mr-2" />
-                  LinkedIn
+                <Link href="https://qiita.com/yh1110" target="_blank">
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  Qiita
                 </Link>
               </Button>
             </div>
@@ -141,11 +138,11 @@ export default function Portfolio() {
                         <div className="flex justify-between items-start mb-2">
                           <div>
                             <CardTitle className="text-xl text-slate-800">
-                              シニアフルスタックエンジニア
+                              フルスタックエンジニア
                             </CardTitle>
                             <CardDescription className="flex items-center text-slate-600 mt-1">
                               <Building className="w-4 h-4 mr-2" />
-                              株式会社テックイノベーション
+                              有限会社海馬
                             </CardDescription>
                           </div>
                           <Badge
@@ -153,14 +150,14 @@ export default function Portfolio() {
                             className="bg-emerald-100 text-emerald-800"
                           >
                             <Calendar className="w-3 h-3 mr-1" />
-                            2022年4月 - 現在
+                            2024年9月 - 現在
                           </Badge>
                         </div>
                       </CardHeader>
                       <CardContent>
                         <p className="text-slate-700 mb-4">
-                          SaaSプロダクトの開発チームリーダーとして、フロントエンドからバックエンドまで幅広く担当。
-                          チームメンバー3名のマネジメントも行い、プロダクトの技術的な意思決定を主導。
+                          旅行会社向けWebアプリの改修や新規開発、鉄道会社向け情報伝達システムの研究開発を担当。
+                          ReactやNext.js、Python、AWS Lambdaを用いた実装とテストを行う。
                         </p>
                         <div className="space-y-3">
                           <div>
@@ -168,15 +165,9 @@ export default function Portfolio() {
                               主な成果:
                             </h4>
                             <ul className="list-disc list-inside text-slate-700 space-y-1">
-                              <li>
-                                新機能開発により月間アクティブユーザー数を30%向上
-                              </li>
-                              <li>
-                                パフォーマンス最適化によりページ読み込み速度を50%改善
-                              </li>
-                              <li>
-                                CI/CDパイプラインの構築によりデプロイ時間を80%短縮
-                              </li>
+                              <li>既存アプリ改修で操作性を向上</li>
+                              <li>Lambda を用いたイベント処理を実装</li>
+                              <li>フロントエンドとバックエンドの設計を統一</li>
                             </ul>
                           </div>
                           <div>
@@ -185,12 +176,11 @@ export default function Portfolio() {
                             </h4>
                             <div className="flex flex-wrap gap-2">
                               <Badge variant="outline">React</Badge>
-                              <Badge variant="outline">TypeScript</Badge>
                               <Badge variant="outline">Next.js</Badge>
-                              <Badge variant="outline">Node.js</Badge>
+                              <Badge variant="outline">Express.js</Badge>
                               <Badge variant="outline">PostgreSQL</Badge>
+                              <Badge variant="outline">Python</Badge>
                               <Badge variant="outline">AWS</Badge>
-                              <Badge variant="outline">Docker</Badge>
                             </div>
                           </div>
                         </div>
@@ -208,57 +198,50 @@ export default function Portfolio() {
                         <div className="flex justify-between items-start mb-2">
                           <div>
                             <CardTitle className="text-xl text-slate-800">
-                              フロントエンドエンジニア
+                              システムエンジニア
                             </CardTitle>
                             <CardDescription className="flex items-center text-slate-600 mt-1">
                               <Building className="w-4 h-4 mr-2" />
-                              株式会社ウェブソリューションズ
+                              大新技研
                             </CardDescription>
                           </div>
                           <Badge variant="outline">
                             <Calendar className="w-3 h-3 mr-1" />
-                            2020年4月 - 2022年3月
+                            2023年9月 - 2024年6月
                           </Badge>
                         </div>
                       </CardHeader>
                       <CardContent>
-                        <p className="text-slate-700 mb-4">
-                          Eコマースサイトの開発・運用を担当。レスポンシブデザインの実装や
-                          ユーザビリティ向上のための機能開発を中心に活動。
-                        </p>
+                          <p className="text-slate-700 mb-4">
+                            発電所向け配管管理システムの構築やVBAマクロによる作業効率化を担当。
+                            顧客向け提案資料や操作マニュアルの作成を行う。
+                          </p>
                         <div className="space-y-3">
-                          <div>
-                            <h4 className="font-semibold text-slate-800 mb-2">
-                              主な成果:
-                            </h4>
-                            <ul className="list-disc list-inside text-slate-700 space-y-1">
-                              <li>モバイル対応により売上を25%向上</li>
-                              <li>
-                                検索機能の改善によりコンバージョン率を15%向上
-                              </li>
-                              <li>
-                                コンポーネントライブラリの構築により開発効率を40%向上
-                              </li>
-                            </ul>
-                          </div>
-                          <div>
-                            <h4 className="font-semibold text-slate-800 mb-2">
-                              使用技術:
-                            </h4>
-                            <div className="flex flex-wrap gap-2">
-                              <Badge variant="outline">React</Badge>
-                              <Badge variant="outline">JavaScript</Badge>
-                              <Badge variant="outline">Sass</Badge>
-                              <Badge variant="outline">Webpack</Badge>
-                              <Badge variant="outline">PHP</Badge>
-                              <Badge variant="outline">MySQL</Badge>
+                            <div>
+                              <h4 className="font-semibold text-slate-800 mb-2">
+                                主な成果:
+                              </h4>
+                              <ul className="list-disc list-inside text-slate-700 space-y-1">
+                                <li>提案資料・マニュアル作成を担当</li>
+                                <li>VBAマクロでデータ登録を自動化</li>
+                                <li>チームでの協調開発を経験</li>
+                              </ul>
+                            </div>
+                            <div>
+                              <h4 className="font-semibold text-slate-800 mb-2">
+                                使用技術:
+                              </h4>
+                              <div className="flex flex-wrap gap-2">
+                                <Badge variant="outline">VBA</Badge>
+                                <Badge variant="outline">Excel</Badge>
+                                <Badge variant="outline">Python</Badge>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      </CardContent>
-                    </Card>
+                        </CardContent>
+                      </Card>
+                    </div>
                   </div>
-                </div>
 
                 {/* First Job */}
                 <div className="relative flex items-start">
@@ -269,47 +252,44 @@ export default function Portfolio() {
                         <div className="flex justify-between items-start mb-2">
                           <div>
                             <CardTitle className="text-xl text-slate-800">
-                              ジュニアエンジニア
+                              運用保守エンジニア
                             </CardTitle>
                             <CardDescription className="flex items-center text-slate-600 mt-1">
                               <Building className="w-4 h-4 mr-2" />
-                              株式会社デジタルクリエイト
+                              スタッフサービスエンジニアリング
                             </CardDescription>
                           </div>
                           <Badge variant="outline">
                             <Calendar className="w-3 h-3 mr-1" />
-                            2019年4月 - 2020年3月
+                            2023年4月 - 2023年8月
                           </Badge>
                         </div>
                       </CardHeader>
-                      <CardContent>
-                        <p className="text-slate-700 mb-4">
-                          新卒として入社し、Webアプリケーションの開発に従事。
-                          基礎的な技術スキルを身につけながら、小規模なプロジェクトを担当。
-                        </p>
+                        <CardContent>
+                          <p className="text-slate-700 mb-4">
+                            メーカー販促システムの運用保守を担当。Bash スクリプトや VBA による自動化、脆弱性診断、報告書作成を実施。
+                          </p>
                         <div className="space-y-3">
                           <div>
                             <h4 className="font-semibold text-slate-800 mb-2">
                               主な業務:
                             </h4>
                             <ul className="list-disc list-inside text-slate-700 space-y-1">
-                              <li>企業サイトのコーディング・保守</li>
-                              <li>WordPressテーマのカスタマイズ</li>
-                              <li>バグ修正・機能追加</li>
-                            </ul>
+                              <li>LaunchAgents/Daemons の不具合修正</li>
+                              <li>IP 制限設定の管理</li>
+                              <li>定期作業を VBA で自動化</li>
+                              </ul>
                           </div>
                           <div>
                             <h4 className="font-semibold text-slate-800 mb-2">
                               使用技術:
                             </h4>
-                            <div className="flex flex-wrap gap-2">
-                              <Badge variant="outline">HTML</Badge>
-                              <Badge variant="outline">CSS</Badge>
-                              <Badge variant="outline">JavaScript</Badge>
-                              <Badge variant="outline">jQuery</Badge>
-                              <Badge variant="outline">PHP</Badge>
-                              <Badge variant="outline">WordPress</Badge>
-                            </div>
+                              <div className="flex flex-wrap gap-2">
+                                <Badge variant="outline">Azure</Badge>
+                                <Badge variant="outline">SQL Server</Badge>
+                                <Badge variant="outline">Bash</Badge>
+                                <Badge variant="outline">VBA</Badge>
+                              </div>
                           </div>
                         </div>
                       </CardContent>
@@ -389,7 +369,7 @@ export default function Portfolio() {
                   <div className="space-y-4">
                     <div>
                       <div className="flex justify-between mb-2">
-                        <span className="text-slate-700">Node.js</span>
+                        <span className="text-slate-700">Express.js / Node.js</span>
                         <span className="text-slate-500">上級</span>
                       </div>
                       <div className="w-full bg-slate-200 rounded-full h-2">
@@ -437,10 +417,10 @@ export default function Portfolio() {
                   <div className="flex flex-wrap gap-2">
                     <Badge>Git</Badge>
                     <Badge>Docker</Badge>
-                    <Badge>Figma</Badge>
-                    <Badge>Jira</Badge>
-                    <Badge>Slack</Badge>
-                    <Badge>Notion</Badge>
+                    <Badge>supabase</Badge>
+                    <Badge>oAuth</Badge>
+                    <Badge>YamadaUI</Badge>
+                    <Badge>Ionic</Badge>
                   </div>
                 </CardContent>
               </Card>
@@ -452,14 +432,16 @@ export default function Portfolio() {
                 <CardContent>
                   <div className="space-y-3">
                     <div className="flex justify-between">
-                      <span className="text-slate-700">日本語</span>
-                      <span className="text-slate-500">ネイティブ</span>
+                      <span className="text-slate-700">TypeScript</span>
+                      <span className="text-slate-500">メイン</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-slate-700">英語</span>
-                      <span className="text-slate-500">
-                        ビジネスレベル (TOEIC 850)
-                      </span>
+                      <span className="text-slate-700">Python</span>
+                      <span className="text-slate-500">業務使用</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-slate-700">VBA</span>
+                      <span className="text-slate-500">業務使用</span>
                     </div>
                   </div>
                 </CardContent>
@@ -505,7 +487,7 @@ export default function Portfolio() {
                   </div>
                   <div className="flex space-x-2">
                     <Button size="sm" variant="outline" asChild>
-                      <Link href="https://github.com" target="_blank">
+                      <Link href="https://github.com/yh1110" target="_blank">
                         <Github className="w-4 h-4 mr-2" />
                         GitHub
                       </Link>
@@ -547,7 +529,7 @@ export default function Portfolio() {
                   </div>
                   <div className="flex space-x-2">
                     <Button size="sm" variant="outline" asChild>
-                      <Link href="https://github.com" target="_blank">
+                      <Link href="https://github.com/yh1110" target="_blank">
                         <Github className="w-4 h-4 mr-2" />
                         GitHub
                       </Link>
@@ -589,7 +571,7 @@ export default function Portfolio() {
                   </div>
                   <div className="flex space-x-2">
                     <Button size="sm" variant="outline" asChild>
-                      <Link href="https://github.com" target="_blank">
+                      <Link href="https://github.com/yh1110" target="_blank">
                         <Github className="w-4 h-4 mr-2" />
                         GitHub
                       </Link>
@@ -653,9 +635,9 @@ export default function Portfolio() {
                 asChild
                 className="border-white text-white hover:bg-white hover:text-slate-800 bg-transparent"
               >
-                <Link href="https://linkedin.com" target="_blank">
-                  <Linkedin className="w-5 h-5 mr-2" />
-                  LinkedIn
+                <Link href="https://qiita.com/yh1110" target="_blank">
+                  <ExternalLink className="w-5 h-5 mr-2" />
+                  Qiita
                 </Link>
               </Button>
             </div>
@@ -668,7 +650,7 @@ export default function Portfolio() {
         <div className="container mx-auto px-4">
           <div className="text-center">
             <p>
-              &copy; {new Date().getFullYear()} 田中 太郎. All rights reserved.
+              &copy; {new Date().getFullYear()} 細田 靖人. All rights reserved.
             </p>
           </div>
         </div>
