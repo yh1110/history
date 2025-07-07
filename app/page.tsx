@@ -7,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { experienceData } from "@/lib/experienceData";
 import {
   Github,
   Linkedin,
@@ -23,7 +24,7 @@ import Link from "next/link";
 export default function Portfolio() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
-      {/* Header */}
+      {/* ヘッダー */}
       <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-4">
           <nav className="flex items-center justify-between">
@@ -64,7 +65,7 @@ export default function Portfolio() {
         </div>
       </header>
 
-      {/* Hero Section */}
+      {/* トップ */}
       <section id="about" className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -118,7 +119,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Experience Section */}
+      {/* 職歴 */}
       <section id="experience" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -133,196 +134,96 @@ export default function Portfolio() {
               {/* Experience items */}
               <div className="space-y-12">
                 {/* Current Job */}
-                <div className="relative flex items-start">
-                  <div className="absolute left-6 w-4 h-4 bg-emerald-500 rounded-full border-4 border-white shadow-lg"></div>
-                  <div className="ml-20">
-                    <Card className="hover:shadow-lg transition-shadow">
-                      <CardHeader>
-                        <div className="flex justify-between items-start mb-2">
-                          <div>
-                            <CardTitle className="text-xl text-slate-800">
-                              シニアフルスタックエンジニア
-                            </CardTitle>
-                            <CardDescription className="flex items-center text-slate-600 mt-1">
-                              <Building className="w-4 h-4 mr-2" />
-                              株式会社テックイノベーション
-                            </CardDescription>
-                          </div>
-                          <Badge
-                            variant="secondary"
-                            className="bg-emerald-100 text-emerald-800"
-                          >
-                            <Calendar className="w-3 h-3 mr-1" />
-                            2022年4月 - 現在
-                          </Badge>
-                        </div>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-slate-700 mb-4">
-                          SaaSプロダクトの開発チームリーダーとして、フロントエンドからバックエンドまで幅広く担当。
-                          チームメンバー3名のマネジメントも行い、プロダクトの技術的な意思決定を主導。
-                        </p>
-                        <div className="space-y-3">
-                          <div>
-                            <h4 className="font-semibold text-slate-800 mb-2">
-                              主な成果:
-                            </h4>
-                            <ul className="list-disc list-inside text-slate-700 space-y-1">
-                              <li>
-                                新機能開発により月間アクティブユーザー数を30%向上
-                              </li>
-                              <li>
-                                パフォーマンス最適化によりページ読み込み速度を50%改善
-                              </li>
-                              <li>
-                                CI/CDパイプラインの構築によりデプロイ時間を80%短縮
-                              </li>
-                            </ul>
-                          </div>
-                          <div>
-                            <h4 className="font-semibold text-slate-800 mb-2">
-                              使用技術:
-                            </h4>
-                            <div className="flex flex-wrap gap-2">
-                              <Badge variant="outline">React</Badge>
-                              <Badge variant="outline">TypeScript</Badge>
-                              <Badge variant="outline">Next.js</Badge>
-                              <Badge variant="outline">Node.js</Badge>
-                              <Badge variant="outline">PostgreSQL</Badge>
-                              <Badge variant="outline">AWS</Badge>
-                              <Badge variant="outline">Docker</Badge>
+                {experienceData.map((experience) => (
+                  <div
+                    className="relative flex items-start"
+                    key={experience.id}
+                  >
+                    <div
+                      className={`absolute left-6 w-4 h-4  rounded-full border-4 border-white shadow-lg ${
+                        experience.isLatest ? "bg-emerald-500" : "bg-slate-400"
+                      }`}
+                    ></div>
+                    <div className="ml-20">
+                      <Link href={`/detail/${experience.id}`} className="block">
+                        <Card className="hover:shadow-lg transition-shadow cursor-pointer hover:scale-[1.02] transition-transform">
+                          <CardHeader>
+                            <div className="flex justify-between items-start mb-2">
+                              <div>
+                                <CardTitle className="text-xl text-slate-800">
+                                  {experience.position}
+                                </CardTitle>
+                                <CardDescription className="flex items-center text-slate-600 mt-1">
+                                  <Building className="w-4 h-4 mr-2" />
+                                  {experience.company}
+                                </CardDescription>
+                              </div>
+                              <Badge
+                                variant={
+                                  experience.isLatest ? "secondary" : "outline"
+                                }
+                                className={`${
+                                  experience.isLatest
+                                    ? "bg-emerald-100 text-emerald-800"
+                                    : ""
+                                }`}
+                              >
+                                <Calendar className="w-3 h-3 mr-1" />
+                                {experience.period}
+                              </Badge>
                             </div>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </div>
-
-                {/* Previous Job */}
-                <div className="relative flex items-start">
-                  <div className="absolute left-6 w-4 h-4 bg-slate-400 rounded-full border-4 border-white shadow-lg"></div>
-                  <div className="ml-20">
-                    <Card className="hover:shadow-lg transition-shadow">
-                      <CardHeader>
-                        <div className="flex justify-between items-start mb-2">
-                          <div>
-                            <CardTitle className="text-xl text-slate-800">
-                              フロントエンドエンジニア
-                            </CardTitle>
-                            <CardDescription className="flex items-center text-slate-600 mt-1">
-                              <Building className="w-4 h-4 mr-2" />
-                              株式会社ウェブソリューションズ
-                            </CardDescription>
-                          </div>
-                          <Badge variant="outline">
-                            <Calendar className="w-3 h-3 mr-1" />
-                            2020年4月 - 2022年3月
-                          </Badge>
-                        </div>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-slate-700 mb-4">
-                          Eコマースサイトの開発・運用を担当。レスポンシブデザインの実装や
-                          ユーザビリティ向上のための機能開発を中心に活動。
-                        </p>
-                        <div className="space-y-3">
-                          <div>
-                            <h4 className="font-semibold text-slate-800 mb-2">
-                              主な成果:
-                            </h4>
-                            <ul className="list-disc list-inside text-slate-700 space-y-1">
-                              <li>モバイル対応により売上を25%向上</li>
-                              <li>
-                                検索機能の改善によりコンバージョン率を15%向上
-                              </li>
-                              <li>
-                                コンポーネントライブラリの構築により開発効率を40%向上
-                              </li>
-                            </ul>
-                          </div>
-                          <div>
-                            <h4 className="font-semibold text-slate-800 mb-2">
-                              使用技術:
-                            </h4>
-                            <div className="flex flex-wrap gap-2">
-                              <Badge variant="outline">React</Badge>
-                              <Badge variant="outline">JavaScript</Badge>
-                              <Badge variant="outline">Sass</Badge>
-                              <Badge variant="outline">Webpack</Badge>
-                              <Badge variant="outline">PHP</Badge>
-                              <Badge variant="outline">MySQL</Badge>
+                          </CardHeader>
+                          <CardContent>
+                            <p className="text-slate-700 mb-4">
+                              {experience.description}
+                            </p>
+                            <div className="space-y-3">
+                              <div>
+                                <h4 className="font-semibold text-slate-800 mb-2">
+                                  主な成果:
+                                </h4>
+                                <ul className="list-disc list-inside text-slate-700 space-y-1">
+                                  {experience.achievements.map(
+                                    (achievement, index) => (
+                                      <li key={index}>{achievement}</li>
+                                    )
+                                  )}
+                                </ul>
+                              </div>
+                              <div>
+                                <h4 className="font-semibold text-slate-800 mb-2">
+                                  使用技術:
+                                </h4>
+                                <div className="flex flex-wrap gap-2">
+                                  {experience.technologies.map(
+                                    (tech, index) => (
+                                      <Badge key={index} variant="outline">
+                                        {tech}
+                                      </Badge>
+                                    )
+                                  )}
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </div>
-
-                {/* First Job */}
-                <div className="relative flex items-start">
-                  <div className="absolute left-6 w-4 h-4 bg-slate-400 rounded-full border-4 border-white shadow-lg"></div>
-                  <div className="ml-20">
-                    <Card className="hover:shadow-lg transition-shadow">
-                      <CardHeader>
-                        <div className="flex justify-between items-start mb-2">
-                          <div>
-                            <CardTitle className="text-xl text-slate-800">
-                              ジュニアエンジニア
-                            </CardTitle>
-                            <CardDescription className="flex items-center text-slate-600 mt-1">
-                              <Building className="w-4 h-4 mr-2" />
-                              株式会社デジタルクリエイト
-                            </CardDescription>
-                          </div>
-                          <Badge variant="outline">
-                            <Calendar className="w-3 h-3 mr-1" />
-                            2019年4月 - 2020年3月
-                          </Badge>
-                        </div>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-slate-700 mb-4">
-                          新卒として入社し、Webアプリケーションの開発に従事。
-                          基礎的な技術スキルを身につけながら、小規模なプロジェクトを担当。
-                        </p>
-                        <div className="space-y-3">
-                          <div>
-                            <h4 className="font-semibold text-slate-800 mb-2">
-                              主な業務:
-                            </h4>
-                            <ul className="list-disc list-inside text-slate-700 space-y-1">
-                              <li>企業サイトのコーディング・保守</li>
-                              <li>WordPressテーマのカスタマイズ</li>
-                              <li>バグ修正・機能追加</li>
-                            </ul>
-                          </div>
-                          <div>
-                            <h4 className="font-semibold text-slate-800 mb-2">
-                              使用技術:
-                            </h4>
-                            <div className="flex flex-wrap gap-2">
-                              <Badge variant="outline">HTML</Badge>
-                              <Badge variant="outline">CSS</Badge>
-                              <Badge variant="outline">JavaScript</Badge>
-                              <Badge variant="outline">jQuery</Badge>
-                              <Badge variant="outline">PHP</Badge>
-                              <Badge variant="outline">WordPress</Badge>
+                            <div className="mt-4 pt-4 border-t border-slate-200">
+                              <div className="flex items-center text-slate-600 text-sm">
+                                <span>詳細を見る</span>
+                                <ExternalLink className="w-4 h-4 ml-2" />
+                              </div>
                             </div>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
+                          </CardContent>
+                        </Card>
+                      </Link>
+                    </div>
                   </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Skills Section */}
+      {/* スキル */}
       <section id="skills" className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -469,7 +370,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Projects Section */}
+      {/* プロジェクト例 */}
       <section id="projects" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -608,7 +509,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* 問い合わせ */}
       <section id="contact" className="py-20 bg-slate-800 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
