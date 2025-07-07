@@ -1,6 +1,7 @@
 export interface ExperienceData {
   id: number;
   isLatest?: boolean;
+  isCurrent?: boolean;
   company: string;
   position: string;
   period: string;
@@ -29,6 +30,52 @@ export interface ExperienceData {
 }
 
 export const experienceData: ExperienceData[] = [
+  {
+    id: 4,
+    isCurrent: true,
+    company: "株式会社 TreyLink",
+    position: "テックリード",
+    period: "2025年5月 - 現在",
+    location: "日本",
+    description:
+      "不動産業界のDX化を目的としたhomelogプロジェクトにテックリードとして参画。React(ionic)とDjangoを用いたマルチプラットフォームアプリを開発。",
+    achievements: [
+      "homelogの設計・実装をリード",
+      "CI/CDパイプラインを整備",
+      "チームメンバーへの技術支援",
+    ],
+    technologies: ["React", "ionic", "Django", "Python"],
+    projects: [
+      {
+        name: "homelog",
+        description:
+          "不動産業界向けマルチプラットフォームアプリの開発。",
+        role: "テックリード・実装",
+        technologies: ["React", "ionic", "Django", "Python"],
+        achievements: [
+          "設計レビューの実施",
+          "開発フローの最適化",
+        ],
+        duration: "継続",
+      },
+    ],
+    teamSize: 10,
+    responsibilities: [
+      "アプリケーションの設計・実装",
+      "技術選定とレビュー",
+      "チームメンバー育成",
+    ],
+    learnings: [
+      "マルチプラットフォーム開発の知見",
+      "チームマネジメント",
+    ],
+    companyInfo: {
+      industry: "不動産DX",
+      size: "10名程度",
+      founded: "-",
+      description: "不動産業界のデジタル化を推進するスタートアップ。",
+    },
+  },
   {
     id: 3,
     isLatest: true,
