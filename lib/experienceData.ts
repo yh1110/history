@@ -1,7 +1,6 @@
 export interface ExperienceData {
   id: number;
   isLatest?: boolean;
-  isCurrent?: boolean;
   company: string;
   position: string;
   period: string;
@@ -32,7 +31,7 @@ export interface ExperienceData {
 export const experienceData: ExperienceData[] = [
   {
     id: 4,
-    isCurrent: true,
+    isLatest: true,
     company: "株式会社 TreyLink",
     position: "テックリード",
     period: "2025年5月 - 現在",
@@ -48,14 +47,10 @@ export const experienceData: ExperienceData[] = [
     projects: [
       {
         name: "homelog",
-        description:
-          "不動産業界向けマルチプラットフォームアプリの開発。",
+        description: "不動産業界向けマルチプラットフォームアプリの開発。",
         role: "テックリード・実装",
         technologies: ["React", "ionic", "Django", "Python"],
-        achievements: [
-          "設計レビューの実施",
-          "開発フローの最適化",
-        ],
+        achievements: ["設計レビューの実施", "開発フローの最適化"],
         duration: "継続",
       },
     ],
@@ -65,10 +60,7 @@ export const experienceData: ExperienceData[] = [
       "技術選定とレビュー",
       "チームメンバー育成",
     ],
-    learnings: [
-      "マルチプラットフォーム開発の知見",
-      "チームマネジメント",
-    ],
+    learnings: ["マルチプラットフォーム開発の知見", "チームマネジメント"],
     companyInfo: {
       industry: "不動産DX",
       size: "10名程度",
@@ -106,10 +98,7 @@ export const experienceData: ExperienceData[] = [
         description: "既存システムの機能追加とテストを担当。",
         role: "設計・実装・テスト",
         technologies: ["React"],
-        achievements: [
-          "React の実務経験を獲得",
-          "テストフローを構築",
-        ],
+        achievements: ["React の実務経験を獲得", "テストフローを構築"],
         duration: "数ヶ月",
       },
       {
@@ -126,8 +115,7 @@ export const experienceData: ExperienceData[] = [
       },
       {
         name: "旅行会社向け web アプリ新規開発",
-        description:
-          "Next.js と express.js を利用した旅行予約システムを構築。",
+        description: "Next.js と express.js を利用した旅行予約システムを構築。",
         role: "設計・実装・テスト",
         technologies: ["Next.js", "express.js", "PostgreSQL"],
         achievements: [
@@ -141,10 +129,7 @@ export const experienceData: ExperienceData[] = [
         description: "Azure 上で稼働する販促システムの運用保守を担当。",
         role: "運用・保守",
         technologies: ["Azure", "SQL Server", "VBA", "Bash"],
-        achievements: [
-          "自動化スクリプトの不具合を修正",
-          "脆弱性診断を実施",
-        ],
+        achievements: ["自動化スクリプトの不具合を修正", "脆弱性診断を実施"],
         duration: "継続",
       },
     ],
@@ -176,10 +161,7 @@ export const experienceData: ExperienceData[] = [
     location: "日本",
     description:
       "発電所事業所向けの配管管理システム構築を担当。提案資料や操作マニュアルの作成、VBA による作業効率化を実施。",
-    achievements: [
-      "顧客向け資料を作成",
-      "VBA マクロでデータ登録を自動化",
-    ],
+    achievements: ["顧客向け資料を作成", "VBA マクロでデータ登録を自動化"],
     technologies: ["VBA", "Excel"],
     projects: [
       {
@@ -187,10 +169,7 @@ export const experienceData: ExperienceData[] = [
         description: "データ登録や報告書作成を支援するシステムを開発。",
         role: "実装・資料作成",
         technologies: ["VBA", "Excel"],
-        achievements: [
-          "登録作業を自動化",
-          "マニュアル作成で運用を支援",
-        ],
+        achievements: ["登録作業を自動化", "マニュアル作成で運用を支援"],
         duration: "9ヶ月",
       },
     ],
@@ -200,10 +179,7 @@ export const experienceData: ExperienceData[] = [
       "提案資料・報告書の作成",
       "データ登録・管理業務",
     ],
-    learnings: [
-      "業務効率化のためのマクロ開発",
-      "顧客向け資料作成スキル",
-    ],
+    learnings: ["業務効率化のためのマクロ開発", "顧客向け資料作成スキル"],
     companyInfo: {
       industry: "プラントエンジニアリング",
       size: "従業員数 非公開",
@@ -217,8 +193,7 @@ export const experienceData: ExperienceData[] = [
     position: "エンジニア",
     period: "2023年4月 - 2023年8月",
     location: "日本",
-    description:
-      "派遣社員として大新技研で配管管理システム構築を支援。",
+    description: "派遣社員として大新技研で配管管理システム構築を支援。",
     achievements: ["VBA を用いたマクロ作成を担当"],
     technologies: ["VBA", "Excel"],
     projects: [
