@@ -146,7 +146,7 @@ export default function Portfolio() {
                     ></div>
                     <div className="ml-20">
                       <Link href={`/detail/${experience.id}`} className="block">
-                        <Card className="hover:shadow-lg transition-shadow cursor-pointer hover:scale-[1.02] transition-transform">
+                        <Card className="hover:shadow-lg  cursor-pointer hover:scale-[1.02] transition-transform">
                           <CardHeader>
                             <div className="flex justify-between items-start mb-2">
                               <div>
