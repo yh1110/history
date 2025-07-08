@@ -195,7 +195,7 @@ export default async function ExperienceDetailPage({ params }: PageProps) {
                           <h4 className="font-semibold text-slate-800 mb-2">
                             プロジェクト概要
                           </h4>
-                          <p className="text-slate-700 mb-2">
+                          <p className="text-slate-700 mb-2 whitespace-pre-line">
                             {project.overview}
                           </p>
                         </div>
@@ -205,7 +205,7 @@ export default async function ExperienceDetailPage({ params }: PageProps) {
                           <h4 className="font-semibold text-slate-800 mb-2">
                             開発経緯
                           </h4>
-                          <p className="text-slate-700 mb-2">
+                          <p className="text-slate-700 mb-2 whitespace-pre-line">
                             {project.developmentHistory}
                           </p>
                         </div>
@@ -216,7 +216,7 @@ export default async function ExperienceDetailPage({ params }: PageProps) {
                             <h4 className="font-semibold text-slate-800 mb-2">
                               開発課題
                             </h4>
-                            <p className="text-slate-700 mb-2">
+                            <p className="text-slate-700 mb-2 whitespace-pre-line">
                               {project.developmentIssue || "特になし"}
                             </p>
                           </div>
@@ -232,7 +232,7 @@ export default async function ExperienceDetailPage({ params }: PageProps) {
                               (content, index) => (
                                 <div key={index}>
                                   <li>{content}</li>
-                                  <p className="text-slate-700 mb-2">
+                                  <p className="text-slate-700 mb-2 whitespace-pre-line">
                                     {project.compatibleContent[index]}
                                   </p>
                                 </div>
